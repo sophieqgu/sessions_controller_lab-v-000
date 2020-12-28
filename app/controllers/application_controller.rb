@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if session[:name]
       render :hello
     else
-      link_to "Create login", login_path
+      redirect_to login_path
     end
   end
 
