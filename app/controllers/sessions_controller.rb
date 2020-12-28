@@ -3,12 +3,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if !params[:name] || params[:name] = ''
+    if !params[:name] || params[:name] == ''
       redirect_to login_path
     else
       session[:name] = params[:name]
       redirect_to root_path
-    end 
+    end
   end
 
   def destroy
