@@ -3,5 +3,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[]
+    session[:name] = params[:name]
+  end
+
+  def destroy
+    session.delete :name
+  end 
 end
